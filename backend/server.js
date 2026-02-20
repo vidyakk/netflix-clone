@@ -8,10 +8,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
+const cors = require("cors");
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL ,
+  origin: "https://netflix-clone-zeta-gray.vercel.app",
   credentials: true
 }));
+
 app.use(express.json());
 
 // MongoDB Connection
