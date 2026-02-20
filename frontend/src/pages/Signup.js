@@ -43,8 +43,8 @@ const Signup = () => {
         password: formData.password
       });
 
-      login(response.data.user, response.data.token);
-      navigate('/dashboard');
+      alert("Account created successfully! Please login.");
+navigate('/login');
     } catch (err) {
       setError(err.response?.data?.message || 'Signup failed. Please try again.');
     } finally {
